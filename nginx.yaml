@@ -1,9 +1,11 @@
 - name: installing nginx
   hosts: localhost
   tasks:
-  - name: nginx
+  - name: install nginx
     ansible.builtin.yum:
-    state: installed
+      name: nginx
+      state: installed
   - name: nginx service
     ansible.builtin.service:
-    state: started
+      name: nginx
+      state: started
